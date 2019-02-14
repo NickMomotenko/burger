@@ -1,0 +1,284 @@
+.slider{
+	width: 100%;
+	position: relative;
+
+	&__wrapp{
+		overflow: hidden;
+	}
+
+	&__list{
+		display: flex;
+		transition: 1s;
+		
+	}
+
+	&__item{
+		position: relative;
+		flex: 1;
+	}
+
+	&__pages{
+		position: absolute;
+		width: 100%;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__page-prev, &__page-next{
+		width: 15px;
+		height: 27px;
+		position: relative;
+	}
+
+	&__page-prev{
+		background: url(../img/burgers/prev.png) no-repeat;
+		left: -15px;
+	}
+
+	&__page-next{
+		background: url(../img/burgers/next.png) no-repeat;
+		right: -15px;
+	}
+}
+
+
+.slide{
+	display: flex;
+	align-items: center;
+
+	@include tablets{
+		flex-direction: column;
+	}
+
+	&__photo , &__content{
+		flex: 1;
+
+		@include tablets{
+			flex: auto;
+		}
+	}
+
+	&__photo{
+		flex-shrink: 0;
+		padding: 60px 0;
+
+		@include tablets{
+			padding: 0;
+			text-align: center;
+		}
+
+	}
+
+	&__img{
+		max-width: 100%;
+		max-height: 100%;
+
+		@include tablets{
+			max-width: 90%;
+		}
+	}
+
+	&__content{
+		margin-left: 20px;
+		font-family: Ubuntu;
+		color:  #ffffff;
+		font-size: 13.98px;
+		font-weight: 300;
+		line-height: 24px;
+		
+		@include tablets{
+			text-align: center;
+			margin-left: 0;
+		}
+	}
+
+	&__desc{
+		margin-bottom: 20px;
+	}
+	&__price{
+		font-family: Gagalin;
+		color:  #e35028;
+		font-weight: 400;
+	}
+	&__order{
+		display: flex;
+		align-items: flex-end;
+
+		@include tablets{
+			justify-content: center;
+		}
+	}
+
+	&__count{
+		font-size: 71.6px;
+	}
+	&__wallet{
+		font-size: 29.84px;
+	}
+	&__buttons{
+		margin-left: 25px;
+	}
+	&__price{
+		line-height: 28px;
+	}
+}
+
+.title{
+	font-family: Gagalin;
+	color:  #ffffff;
+	font-size: 71.71px;
+	font-weight: 400;
+	line-height: 63.745px;
+
+	@include phones{
+		font-size: 40px;
+		line-height: 50px;
+	}
+
+	&--mb{
+		margin-bottom: 50px;
+
+		@include phones{
+			margin-bottom: 20px;
+		}
+	}
+}
+
+.composition{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 5px;
+	width: 90px;
+	height: 90px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+
+	&:hover{
+		background-color:  rgba(227, 80, 40, 0.4);
+	}
+	&:hover .composition__down{
+		visibility:visible;
+	}
+	
+
+	&__icon{
+		display: flex;
+		flex-direction: column;
+		position: relative;
+	}
+
+	&__pic{
+		max-height: 100%;
+		max-width: 100%;
+	}
+
+	&__text{
+		font-family: Gagalin;
+		color:  #ffffff;
+		font-size: 13.92px;
+		font-weight: 400;
+	}
+
+	&__down{
+		position: absolute;
+		top: 0;
+		left: 100%;
+		background: rgba(254,248,236 ,1);
+		border-radius: 5px;
+		visibility: hidden;
+		z-index: 1;
+
+		@include phones{
+			left: -5%;
+		}
+		
+	}
+	
+	&__list{
+		margin: 15px 0;
+		width: 270px;
+	}
+
+	&__item{
+		display: flex;
+		width: 100%;
+		margin-bottom: 10px;
+		justify-content: space-around;
+		align-items: center;
+
+		&:last-child{
+			margin-bottom:0;
+		}
+	}
+
+	&__icon{
+		height: 35px;
+		width: 35px;
+	}
+
+	&__avatar{
+		max-height: 100%;
+		max-width: 100%;
+	}
+
+	&__name, &__grams{
+		font-family: Ubuntu;
+		font-weight: 500;
+	}
+}
+
+.calories{
+	height: 80px;
+	width: 60px;
+	font-family: Gagalin;
+	color:  #ffffff;
+	font-size: 19.9px;
+	font-weight: 400;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	
+	@include tablets{
+		top: 0;
+		right: 0;
+		bottom: auto;
+		left: auto;
+	}
+
+	@include phones{
+		right: 0;
+	}
+
+	&__img{
+		position: relative;
+	}
+
+	&__pic{
+		max-height: 100%;
+		max-height: 100%;
+	}
+	
+
+	&__count{
+		position: absolute;
+		top: 50%;
+    	left: 50%;
+    	transform: translate(-50%, -50%);
+	}
+
+	&__text{
+		font-size: 13.92px;
+		position: absolute;
+		bottom: 0%;
+    	left: 50%;
+    	transform: translateX(-50%);
+	}
+}
+
+

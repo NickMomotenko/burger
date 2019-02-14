@@ -1,0 +1,41 @@
+.menu{
+	text-transform: uppercase;
+
+	&__list{
+        display: flex;
+        align-items: center;
+	}
+
+	&__item{
+		display: flex;
+        align-items: center;
+        margin-right: rem(15px);
+
+        &:after{
+			content: "";
+			display: inline-block;
+			height:rem(5px);
+			width:rem(5px);
+			border-radius: 50%;
+			background: #fff;
+			margin-left: rem(15px);
+		}
+
+        &:last-child{
+            margin-right: 0;
+
+            &:after{
+            	content:"";
+            	display: none;
+            }
+        }
+	}
+
+	&__link{
+        color: #fff;
+
+		&:hover{
+			color: #c3b0b0;
+		}
+	}
+}

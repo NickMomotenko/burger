@@ -1,0 +1,36 @@
+.header{
+	display: flex;
+	align-items: center;
+	width: 100%;
+	max-width: $container;
+	font-family: Ubuntu;
+	font-size: rem(13px);
+	font-weight: 500;
+	padding-top: rem(10px);
+
+	@include tablets{
+		justify-content: space-between;
+	}
+	
+ 	&__menu{
+ 		margin-left: auto;
+
+ 		@include tablets{
+ 			display: none;
+ 		}
+ 	}
+ 	
+ 	&__button{
+		margin-left: rem(15px);
+
+		@include phones{
+			margin-left: 0;
+			margin-right: 70px;
+		}
+
+		@include tablets{
+			margin-right: 50px;
+			margin-left: 0;
+		}
+ 	}
+}

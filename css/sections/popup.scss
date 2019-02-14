@@ -1,0 +1,108 @@
+.popup{
+    position: fixed;
+    top:0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(47, 50, 52, 0.9);
+
+    &__display{
+        position: relative;
+        background: #fff;
+        width: 480px;
+        border-radius: 5px;
+        color: black;
+        padding: 20px;
+
+        @include phones{
+            margin: 0 5px;
+        }
+    }
+
+    &__title{
+        font-family: "Gagalin";
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+
+    &__text{
+        line-height: 25px;
+    }
+
+    &__cross{
+        display: block;
+		position: absolute;
+		top: 20px;
+		right: 30px;
+
+		&:after{
+			content:"";
+			height: 25px;
+			width: 4px;
+			transform: rotate(45deg);
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: #ed886d;
+			border-radius: 2px;
+		}
+
+		&:before{
+			content:"";
+			height: 25px;
+			width: 4px;
+			transform: rotate(-45deg);
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: #ed886d;
+			border-radius: 2px;
+		}
+    }
+}
+
+
+
+.popup-order-true, .popup-order-false{
+    position: fixed;
+    top:0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(47, 50, 52, 0.9);
+}
+
+.non-open{
+    display: none;
+}
+
+
+.popup-order-false .popup__display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .popup__title {
+         margin-bottom: 0;
+    }
+}
+
+.popup-order-true .popup__display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .popup__title {
+         margin-bottom: 0;
+    }
+}
+
+ 

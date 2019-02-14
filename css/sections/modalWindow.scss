@@ -1,0 +1,98 @@
+.modalWindow{
+	height: 100%;
+	width: 100%;
+	background: #23262a;
+	z-index: 10000;
+	position: fixed;
+	top: 0;
+	
+
+	&__container{
+		margin: 0 auto;
+	}
+
+
+	@include tablets{
+		visibility: visible;
+	}
+
+
+	&__container{
+		max-width: 95%;
+	}
+
+	&__header{
+		display: flex;
+		justify-content: space-between;
+		margin-top: 10px;
+	}
+
+	&__cross{
+		display: block;
+		background: #ccc;
+		position: relative;
+		top: 20px;
+		right: 30px;
+
+		&:after{
+			content:"";
+			height: 25px;
+			width: 4px;
+			transform: rotate(45deg);
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: #ccc;
+			border-radius: 2px;
+		}
+
+		&:before{
+			content:"";
+			height: 25px;
+			width: 4px;
+			transform: rotate(-45deg);
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: #ccc;
+			border-radius: 2px;
+		}
+	}
+
+	&__menu{
+		height: 100%;
+		margin-top: 100px;
+	}
+
+	.menu__list{
+		height: 100%;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.menu__item{
+		display: flex;
+		flex-direction: column;
+		margin: 0 0 20px 0;
+		text-align: center;
+
+		&:after{
+			margin-left: 0;
+			margin-top: 10px;
+		}
+	}
+	
+	.menu__link{
+		margin-left: 0;
+
+		&:first-child{
+			margin-top: 0;
+		}
+	}
+
+}
+
+.non-active{
+	display: none;
+}

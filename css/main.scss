@@ -1,0 +1,37 @@
+
+//breakpoints
+
+$tablets:768px;
+$phones:480px;
+
+
+//config
+@import 'config/variables.scss';
+@import 'config/media.scss';
+
+//layout
+@import 'layout/base.scss';
+@import 'layout/fonts.css';
+
+//layout
+@import 'sections/header.scss';
+@import 'sections/logo.scss';
+@import 'sections/nav.scss';
+@import 'sections/content.scss';
+
+@import 'sections/best.scss';
+@import 'sections/burgers.scss';
+@import 'sections/feed.scss';
+@import 'sections/team.scss';
+@import 'sections/accordeon-team.scss';
+
+@import 'sections/order.scss';
+@import 'sections/menu.scss';
+@import 'sections/slider.scss';
+@import 'sections/video.scss';
+@import 'sections/footer.scss';
+@import 'sections/mainsc.scss';
+@import 'sections/dropmenu.scss';
+@import 'sections/popup.scss';
+@import 'sections/modalWindow.scss';
+@import 'sections/steps.scss';

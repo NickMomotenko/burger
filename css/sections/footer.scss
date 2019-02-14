@@ -1,0 +1,96 @@
+.contacts{
+ 	background-size: cover;
+	position: relative;
+	
+}
+
+.footer{
+	background: #151515;
+	z-index: 1;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	font-family: Ubuntu;
+	color:  #ffffff;
+	font-size: rem(14px);
+	font-weight: 300;
+	line-height: rem(24px);
+	padding:rem( 7px) 0;
+
+	.container{
+		display: flex;
+
+		@include phones{
+			flex-direction: column;
+			text-align: center;
+		}
+	}
+
+	&__cop{
+		width: 50%;
+		&-link{
+			color:  #e45028;
+			font-weight: 700;
+
+			&:before{
+				content:"";
+				display: inline-block;
+				height: 12px;
+				width: 12px;
+				background: url(../img/map/phone.png) no-repeat;
+				padding-right: 5px;
+				vertical-align: middle;
+
+			}
+
+
+		}
+
+		@include phones{
+			width: 100%;
+		}
+	}
+	&__socials{
+		width: 50%;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+
+		@include phones{
+			width: 100%;
+			justify-content: center;
+			margin-top: 10px;
+		}
+	}
+	
+}
+
+.socials{
+	display: flex;
+
+	&__item{
+		margin-left: rem(20px);
+
+		&:first-child{
+			margin-left: 0;
+		}
+	}
+
+	&__link{
+		display: flex;
+	}
+
+	&__icon {
+		height: 20px;
+		width: 20px;
+		fill:#595959;
+
+	}
+	
+}
+
+.socials__icon:hover{
+	fill: white;
+}

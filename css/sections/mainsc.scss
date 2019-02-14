@@ -1,0 +1,85 @@
+.main{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	background: url(../img/main/texture.png) no-repeat;
+	background-size: cover;
+
+	&__down{
+		display: inline-flex;
+		margin-bottom: rem(35px);
+	}
+}
+
+.button{
+
+	&_bg_red{
+		background:$color-r;
+	}
+	&_bg_black{
+		background:$color-b;
+	}
+	&:hover{
+		background: #cf5736;
+		transition: .5s;
+	}
+
+}
+
+.section__title{
+	font-family: Gagalin;
+	color:  #f9b43b;
+	font-size: rem(72px);
+	font-weight: 400;
+	line-height: rem(85px);
+	margin-bottom: rem(30px);
+	&--black{
+		color: #2f3234;
+		margin-bottom: rem(55px);
+	}
+
+}
+
+.main .section__title{
+	@include phones{
+		font-size: rem(50px);
+		margin-bottom: rem(15px);
+	}
+}
+
+.order .section__title{
+	@include phones{
+		font-size: rem(60px);
+		line-height: rem(70px);
+	}
+}
+
+.section__title-second{
+	font-family: Lifehack;
+	color:  #ffffff;
+	font-size: rem(65px);
+	font-weight: 500;
+    line-height: rem(66px);
+
+    @include tablets{
+    	max-width: 99%;
+		text-align: center;
+    }
+
+    @include phones{
+    	text-align: center;
+    }
+}
+
+.main .section__title-second{
+	@include phones{
+		font-size: rem(45px);
+	}
+}
+
+.down{
+	width: rem(29px);
+	height: rem(14px);
+	background: url(../img/main/scrolldown.png) center center no-repeat;
+}

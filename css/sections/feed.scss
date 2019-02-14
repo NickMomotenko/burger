@@ -1,0 +1,146 @@
+.feed{
+	&__list{
+		height: 100%;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__item{
+		position: relative;
+		width: 25%;
+		height: 50%;
+		cursor:pointer;
+
+		@include tablets{
+			width: 50%;
+			height: 25%;
+		}
+
+		&:hover .feed__info{
+			visibility: visible;
+
+		}
+	}
+
+	&__info{
+		visibility: hidden;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		position: relative;
+		padding: 0 rem(20px) 0 rem(20px);
+		height: 100%;
+		background:rgba(80,80,80,.7);
+
+		@include tablets{
+			align-items: center;
+		}
+
+		@include tablets{
+			padding: rem(10px) rem(20px) 0 rem(20px);
+		}
+	}
+
+	&__back{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		filter: grayscale(100%);
+		&-one{
+			background: url(../img/feed/feed-1.png) no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+		&-two{
+			background: url(../img/feed/feed-2.png) no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+		&-three{
+			background: url(../img/feed/feed-3.png) no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+		&-four{
+			background: url(../img/feed/feed-4.png) no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+		&-five{
+			background: url(../img/feed/feed-5.png) no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+		&-six{
+			background: url(../img/feed/feed-6.png) no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+		&-seven{
+			background: url(../img/feed/feed-7.png) no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+		&-eight{
+			background: url(../img/feed/feed-8.png) no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+	}
+	&__title{
+		font-family: Gagalin;
+		color:  #ffffff;
+		font-size: rem(13.92px);
+		font-weight: 400;
+		margin-bottom: rem(25px);
+
+		@include phones{
+			font-size: 24px;
+			text-align: center;
+		}
+
+		@include tablets{
+			margin-bottom: rem(10px);
+		}
+
+
+	}
+	&__text{
+		font-family: Ubuntu;
+		color:  #ffffff;
+		font-size: rem(14px);
+		font-weight: 300;
+		line-height: rem(24px);
+		margin-bottom: rem(15px);
+
+		@include phones{
+			display: none;
+		}
+
+		@include tablets{
+			margin-bottom: 0;
+			line-height: rem(20px);
+			text-align: center;
+		}
+	}
+
+}
+
+.feed .button_mobile{
+	display: none;
+
+	@include phones{
+		display: flex;
+	}
+}
+
+.feed .button_desctop{
+	display: flex;
+
+	@include phones{
+		display: none;
+	}
+}

@@ -1,0 +1,116 @@
+.main {
+  height: 100vh;
+  width: 100%;
+  background: url(../img/main/texture.png) center bottom no-repeat;
+  background-size: cover;
+  position: relative; }
+  .main:after {
+    content: "";
+    display: block;
+    background: url(../img/main/scrolldown.png) center center no-repeat;
+    width: 29px;
+    height: 14px;
+    position: absolute;
+    left: 50%;
+    bottom: 6%; }
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-family: Ubuntu;
+  font-size: 13px;
+  font-weight: 500; }
+  .header__logo {
+    margin-top: 10px; }
+  .header__menu {
+    margin-top: 38px;
+    margin-left: 60px; }
+  .header__button {
+    margin-top: 27px; }
+
+.logo {
+  display: inline-block; }
+  .logo__pic {
+    width: 92px;
+    height: 69px; }
+
+.menu {
+  text-transform: uppercase; }
+  .menu__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .menu__item {
+    margin-right: 13px;
+    position: relative; }
+    .menu__item:last-child {
+      margin-right: 0; }
+    .menu__item:after {
+      content: "";
+      height: 5px;
+      width: 5px;
+      display: inline-block;
+      border-radius: 50%;
+      background: #fff;
+      margin-left: 14px;
+      vertical-align: middle; }
+    .menu__item:last-child:after {
+      display: none; }
+  .menu__link {
+    color: #fff; }
+    .menu__link:hover {
+      color: #c3b0b0; }
+
+.button {
+  border-radius: 5px;
+  background: #e45028;
+  border: none;
+  font-family: Ubuntu;
+  font-size: 13px;
+  font-weight: 500; }
+  .button:hover {
+    background: #cf5736;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s; }
+  .button__link {
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px 10px; }
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .content__image {
+    margin-left: 55px; }
+  .content__title {
+    margin-top: 128px;
+    padding-left: 10px; }
+
+.image {
+  width: 417px;
+  height: 424px; }
+
+.title {
+  font-family: Gagalin;
+  color: #f9b43b;
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 85px; }
+
+.title-second {
+  font-family: Lifehack;
+  color: #ffffff;
+  font-size: 65px;
+  font-weight: 500;
+  margin-top: 15px;
+  line-height: 66px; }
